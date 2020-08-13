@@ -8,7 +8,6 @@ $ npm install order-map
 ```
 
 ### scripts
-* Unpackaged
 
 ```html
 <script src="//daybrush.com/order-map/release/latest/dist/order-map.min.js"></script>

@@ -3,7 +3,7 @@ import { IObject } from "@daybrush/utils";
 /**
  *
  */
-export default class OrderMap<T = number | string> {
+class OrderMap<T = number | string> {
     public orderMap: IObject<T[]> = {};
 
     /**
@@ -183,3 +183,5 @@ export default class OrderMap<T = number | string> {
         return map;
     }
 }
+
+export default OrderMap;
