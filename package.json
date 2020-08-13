@@ -1,0 +1,61 @@
+{
+    "name": "order-map",
+    "version": "0.1.1",
+    "description": "A order-map collection in the form of key, value, that ensures the index.",
+    "main": "./dist/order-map.cjs.js",
+    "module": "./dist/order-map.esm.js",
+    "sideEffects": false,
+    "types": "declaration/OrderMap.d.ts",
+    "scripts": {
+        "start": "rollup -c -w",
+        "build": "rollup -c && npm run declaration && print-sizes ./dist",
+        "declaration": "rm -rf declaration && tsc -p tsconfig.declaration.json",
+        "doc": "rm -rf ./doc && jsdoc -c jsdoc.json",
+        "prerelease": "npm run build && prerelease --dirs=dist,doc",
+        "release": "npm run build && npm run doc && release --dirs=dist,doc",
+        "release:init": "npm run build && npm run doc && release -i --dirs=dist,doc",
+        "test": "jest --watchAll",
+        "coverage": "jest --coverage && print-coveralls --sort=desc",
+        "coveralls": "cat ./coverage/lcov.info | coveralls"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/daybrush/order-map.git"
+    },
+    "author": "Daybrush",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/daybrush/order-map/issues"
+    },
+    "homepage": "https://github.com/daybrush/order-map#readme",
+    "dependencies": {
+        "@daybrush/utils": "^0.13.0"
+    },
+    "peerDependencies": {
+        "@daybrush/utils": ">=0.13.0"
+    },
+    "keywords": [
+        "order",
+        "list",
+        "map",
+        "order-map",
+        "collection",
+        "key",
+        "value",
+        "array"
+    ],
+    "devDependencies": {
+        "@daybrush/builder": "^0.1.0",
+        "@daybrush/jsdoc": "^0.3.7",
+        "@daybrush/release": "^0.2.4",
+        "@types/jest": "^24.0.13",
+        "coveralls": "^3.0.3",
+        "daybrush-jsdoc-template": "^1.6.0",
+        "jest": "^24.8.0",
+        "print-coveralls": "^1.2.2",
+        "print-sizes": "0.0.4",
+        "ts-jest": "^24.0.2",
+        "tslint": "^5.16.0",
+        "typescript": "^3.4.5"
+    }
+}
