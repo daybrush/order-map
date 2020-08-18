@@ -1,6 +1,6 @@
 {
     "name": "order-map",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "description": "A order-map collection in the form of key, value, that ensures the index.",
     "main": "./dist/order-map.cjs.js",
     "module": "./dist/order-map.esm.js",

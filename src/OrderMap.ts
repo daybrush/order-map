@@ -165,14 +165,24 @@ class OrderMap<T = number | string> {
      *
      */
     public setObject(obj: IObject<T[]>) {
-        this.orderMap = {};
-
         const orderMap = this.orderMap;
+
         for (const name in obj) {
             orderMap[name] = obj[name].slice();
         }
     }
+    /**
+     *
+     */
+    public getObject() {
+        const nextMap = {};
 
+        const orderMap = this.orderMap;
+        for (const name in orderMap) {
+            nextMap[name] = orderMap[name].slice();
+        }
+        return nextMap;
+    }
     /**
      *
      */
