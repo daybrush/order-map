@@ -174,7 +174,7 @@ class OrderMap<T = number | string> {
     /**
      *
      */
-    public getObject() {
+    public getObject(): IObject<T[]> {
         const nextMap = {};
 
         const orderMap = this.orderMap;
