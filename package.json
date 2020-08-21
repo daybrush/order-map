@@ -1,6 +1,6 @@
 {
     "name": "order-map",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "description": "A order-map collection in the form of key, value, that ensures the index.",
     "main": "./dist/order-map.cjs.js",
     "module": "./dist/order-map.esm.js",
@@ -29,10 +29,10 @@
     },
     "homepage": "https://github.com/daybrush/order-map#readme",
     "dependencies": {
-        "@daybrush/utils": "^0.13.0"
+        "@daybrush/utils": "^1.0.0"
     },
     "peerDependencies": {
-        "@daybrush/utils": ">=0.13.0"
+        "@daybrush/utils": ">=1.0.0"
     },
     "keywords": [
         "order",
