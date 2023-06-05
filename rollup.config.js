@@ -23,7 +23,7 @@ module.exports = builder([
         format: "es",
     },
     {
-        input: "src/OrderMap.ts",
+        input: "src/index.cjs.ts",
         output: "./dist/order-map.cjs.js",
         exports: "named",
         format: "cjs",
