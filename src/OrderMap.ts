@@ -1,10 +1,8 @@
-import { IObject } from "@daybrush/utils";
-
 /**
  *
  */
 class OrderMap<T = number | string> {
-    public orderMap: IObject<T[]> = {};
+    public orderMap: Record<string, T[]> = {};
 
     /**
      *
@@ -23,6 +21,23 @@ class OrderMap<T = number | string> {
      */
     public get(names: T[]): T[] | undefined {
         return this.orderMap[this.getFullName(names)];
+    }
+    /**
+     *
+     */
+    public hasName(names: T[]) {
+        const length = names.length;
+
+        if (!length) {
+            return false;
+        }
+        const lastName = names[length - 1];
+        const arr = this.get(names.slice(0, length - 1));
+
+        if (arr) {
+            return arr.indexOf(lastName) >= 0;
+        }
+        return false;
     }
 
     /**
@@ -164,7 +179,7 @@ class OrderMap<T = number | string> {
     /**
      *
      */
-    public setObject(obj: IObject<T[]>) {
+    public setObject(obj: Record<string, T[]>) {
         const orderMap = this.orderMap;
 
         for (const name in obj) {
@@ -174,7 +189,7 @@ class OrderMap<T = number | string> {
     /**
      *
      */
-    public getObject(): IObject<T[]> {
+    public getObject(): Record<string, T[]> {
         const nextMap = {};
 
         const orderMap = this.orderMap;
