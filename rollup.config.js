@@ -1,7 +1,7 @@
 
-import builder from "@daybrush/builder";
+const builder = require("@daybrush/builder");
 
-export default builder([
+module.exports = builder([
     {
         name: "OrderMap",
         input: "src/OrderMap.ts",
@@ -19,13 +19,13 @@ export default builder([
     {
         input: "src/OrderMap.ts",
         output: "./dist/order-map.esm.js",
-        exports: "default",
+        exports: "named",
         format: "es",
     },
     {
         input: "src/OrderMap.ts",
         output: "./dist/order-map.cjs.js",
-        exports: "default",
+        exports: "named",
         format: "cjs",
     },
 ]);

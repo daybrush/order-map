@@ -39,17 +39,18 @@
         "array"
     ],
     "devDependencies": {
-        "@daybrush/builder": "^0.1.0",
-        "@daybrush/jsdoc": "^0.3.7",
-        "@daybrush/release": "^0.2.4",
+        "@daybrush/builder": "^0.2.4",
+        "@daybrush/jsdoc": "^0.4.7",
+        "@daybrush/release": "^0.7.1",
         "@types/jest": "^24.0.13",
         "coveralls": "^3.0.3",
-        "daybrush-jsdoc-template": "^1.6.0",
+        "daybrush-jsdoc-template": "^1.10.0",
         "jest": "^24.8.0",
         "print-coveralls": "^1.2.2",
         "print-sizes": "0.0.4",
         "ts-jest": "^24.0.2",
+        "tslib": "^2.5.3",
         "tslint": "^5.16.0",
-        "typescript": "^3.4.5"
+        "typescript": "^4.5 <4.6"
     }
 }
